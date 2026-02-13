@@ -12,7 +12,16 @@
       "Bash(gh:*)",
       "Bash(export PATH=\"$PATH:/c/Program Files/GitHub CLI\")",
       "Bash(git push)",
-      "Bash(npm create:*)"
+      "Bash(npm create:*)",
+      "Bash(npm run type-check:*)",
+      "Bash(curl:*)",
+      "Bash(Get-Process node -ErrorAction SilentlyContinue)",
+      "Bash(Stop-Process -Force)",
+      "Bash(exit 0)",
+      "Bash(powershell -Command \"Get-Process node -ErrorAction SilentlyContinue | Stop-Process -Force\")",
+      "Bash(npx vite --version)",
+      "Bash(node -e:*)",
+      "Bash(powershell -Command:*)"
     ]
   }
 }

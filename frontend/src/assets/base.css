@@ -1,53 +1,118 @@
-/* color palette from <https://github.com/vuejs/theme> */
+/* hops Design System - Light Mode (Default) */
 :root {
-  --vt-c-white: #ffffff;
-  --vt-c-white-soft: #f8f8f8;
-  --vt-c-white-mute: #f2f2f2;
+  /* Primary Brand Color - Teal (Darker for Light Mode) */
+  --color-primary: #00897B;
+  --color-primary-hover: #00695C;
+  --color-primary-light: #B2DFDB;
+  --color-primary-dark: #004D40;
 
-  --vt-c-black: #181818;
-  --vt-c-black-soft: #222222;
-  --vt-c-black-mute: #282828;
+  /* Backgrounds */
+  --color-background: #F5F5F5;
+  --color-background-soft: #E8E8E8;
+  --color-background-mute: #DADADA;
 
-  --vt-c-indigo: #2c3e50;
+  /* Text */
+  --color-text: #2E2E2E;
+  --color-text-soft: #6B6B6B;
+  --color-heading: #1A1A1A;
 
-  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
-  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
-  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
-  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+  /* Borders */
+  --color-border: #E0E0E0;
+  --color-border-hover: #BDBDBD;
 
-  --vt-c-text-light-1: var(--vt-c-indigo);
-  --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
-  --vt-c-text-dark-1: var(--vt-c-white);
-  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+  /* Status Colors */
+  --status-pending: #757575;
+  --status-pending-bg: rgba(117, 117, 117, 0.15);
+  --status-in-progress: #1976D2;
+  --status-in-progress-bg: rgba(25, 118, 210, 0.15);
+  --status-completed: #388E3C;
+  --status-completed-bg: rgba(56, 142, 60, 0.15);
+  --status-cancelled: #D32F2F;
+  --status-cancelled-bg: rgba(211, 47, 47, 0.15);
+
+  /* Spacing & Typography */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 0.75rem;
+  --spacing-lg: 1rem;
+  --spacing-xl: 1.5rem;
+  --spacing-2xl: 2rem;
+
+  --font-size-xs: 0.7rem;
+  --font-size-sm: 0.8rem;
+  --font-size-base: 0.85rem;
+  --font-size-md: 0.95rem;
+  --font-size-lg: 1rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
 }
 
-/* semantic color variables for this project */
-:root {
-  --color-background: var(--vt-c-white);
-  --color-background-soft: var(--vt-c-white-soft);
-  --color-background-mute: var(--vt-c-white-mute);
-
-  --color-border: var(--vt-c-divider-light-2);
-  --color-border-hover: var(--vt-c-divider-light-1);
-
-  --color-heading: var(--vt-c-text-light-1);
-  --color-text: var(--vt-c-text-light-1);
-
-  --section-gap: 160px;
-}
-
+/* Dark Mode - System Preference */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --color-background: var(--vt-c-black);
-    --color-background-soft: var(--vt-c-black-soft);
-    --color-background-mute: var(--vt-c-black-mute);
+  :root:not([data-theme="light"]) {
+    /* Primary Brand Color - Teal (Lighter for Dark Mode) */
+    --color-primary: #4DB6AC;
+    --color-primary-hover: #80CBC4;
+    --color-primary-light: #26A69A;
+    --color-primary-dark: #00897B;
 
-    --color-border: var(--vt-c-divider-dark-2);
-    --color-border-hover: var(--vt-c-divider-dark-1);
+    /* Backgrounds */
+    --color-background: #121212;
+    --color-background-soft: #1E1E1E;
+    --color-background-mute: #2C2C2C;
 
-    --color-heading: var(--vt-c-text-dark-1);
-    --color-text: var(--vt-c-text-dark-2);
+    /* Text */
+    --color-text: #E0E0E0;
+    --color-text-soft: #B0B0B0;
+    --color-heading: #FFFFFF;
+
+    /* Borders */
+    --color-border: #333333;
+    --color-border-hover: #4A4A4A;
+
+    /* Status Colors */
+    --status-pending: #9E9E9E;
+    --status-pending-bg: rgba(158, 158, 158, 0.2);
+    --status-in-progress: #42A5F5;
+    --status-in-progress-bg: rgba(66, 165, 245, 0.2);
+    --status-completed: #66BB6A;
+    --status-completed-bg: rgba(102, 187, 106, 0.2);
+    --status-cancelled: #EF5350;
+    --status-cancelled-bg: rgba(239, 83, 80, 0.2);
   }
+}
+
+/* Dark Mode - Manual Override */
+:root[data-theme="dark"] {
+  /* Primary Brand Color - Teal (Lighter for Dark Mode) */
+  --color-primary: #4DB6AC;
+  --color-primary-hover: #80CBC4;
+  --color-primary-light: #26A69A;
+  --color-primary-dark: #00897B;
+
+  /* Backgrounds */
+  --color-background: #121212;
+  --color-background-soft: #1E1E1E;
+  --color-background-mute: #2C2C2C;
+
+  /* Text */
+  --color-text: #E0E0E0;
+  --color-text-soft: #B0B0B0;
+  --color-heading: #FFFFFF;
+
+  /* Borders */
+  --color-border: #333333;
+  --color-border-hover: #4A4A4A;
+
+  /* Status Colors */
+  --status-pending: #9E9E9E;
+  --status-pending-bg: rgba(158, 158, 158, 0.2);
+  --status-in-progress: #42A5F5;
+  --status-in-progress-bg: rgba(66, 165, 245, 0.2);
+  --status-completed: #66BB6A;
+  --status-completed-bg: rgba(102, 187, 106, 0.2);
+  --status-cancelled: #EF5350;
+  --status-cancelled-bg: rgba(239, 83, 80, 0.2);
 }
 
 *,
